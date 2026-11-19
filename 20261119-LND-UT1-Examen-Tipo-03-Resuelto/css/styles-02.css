@@ -1,0 +1,94 @@
+/* DESKTOP: > 992px */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section.nature {
+    margin: 2rem 2rem;
+}
+
+h2#nature-title {
+    text-align: center;
+    margin: 1rem;
+}
+
+.nature-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-container {
+    width: calc((100% - 20px) / 2);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nature-boxes {
+    width: calc((100% - 20px) / 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nature-box {
+    width: 100%;
+    height: calc((100% - 2 * 20px) / 3);
+    background-color: lightblue;
+    padding: 20px;
+}
+
+/* TABLET: <= 992px */
+@media screen and (max-width: 992px) {
+    .nature-container {
+        flex-direction: column;
+    }
+
+    .nature-boxes {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .nature-box {
+        width: calc((100% - 2 * 20px) / 3);
+        height: auto;
+    }
+
+    .image-container {
+        width: 100%;
+    }
+}
+
+/* MOBILE: <= 768px */
+@media screen and (max-width: 768px) {
+
+    .nature-boxes {
+        gap: 20px;
+    }
+
+    .nature-box,
+    .image-container {
+        width: 100%;
+    }
+
+    .mountains {
+        order: 1;
+    }
+
+    .forests {
+        order: 2;
+    }
+
+    .lakes {
+        order: 3;
+    }
+}
